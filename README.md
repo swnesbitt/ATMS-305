@@ -1,10 +1,8 @@
-# atms391geodata
-This is the github repository for the ATMS 391 Advanced Geophysical Data Analysis course in the Department of Atmospheric Sciences at the University of Illinois.
+# ATMS-305
+This is the github repository for the ATMS 305 Computing and Data Analysis course in the Department of Atmospheric Sciences at the University of Illinois.
 
-[Syllabus](https://github.com/swnesbitt/atms391geodata/blob/master/SYLLABUS.md)
+[Syllabus](https://github.com/swnesbitt/ATMS-305/blob/master/SYLLABUS.md)
 
-Computational resources and teaching platform graciously provided by [Sage Math Cloud](https://cloud.sagemath.com/)
+Computational resources and teaching platform graciously provided by the Department of Atmospheric Sciences at the University of Illinois.
 
-Contact Prof. Steve Nesbitt (mailto:snesbitt@illinois.edu) or TA Jian Tian (mailto:jtian4@illinois.edu).
-# atms391geodata
-# atms391geodata
+Contact [Prof. Steve Nesbitt (snesbitt@illinois.edu)](mailto:snesbitt@illinois.edu) or TA [Andrew Huang (ahuang11@illinois.edu)](mailto:ahuang11@illinois.edu).
