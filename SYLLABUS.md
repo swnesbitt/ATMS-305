@@ -11,19 +11,19 @@ E-mail: [snesbitt@illinois.edu](mailto:snesbitt@illinois.edu)
 
 Web site: [Cloud Systems Research Group](http://publish.illinois.edu/snesbitt)
 
-Office hours: TBD after poll
+Office hours: Thursday, 11:00 AM-12:00 PM, Room 203 Atmospheric Sciences Building
 
 ## Teaching assistant
 Andrew Huang
 
-Office: 214 Atmospheric Sciences Building
+Office: 213 Atmospheric Sciences Building
 
 E-mail: [ahuang11@illinois.edu](mailto:ahuang11@illinois.edu)
 
-Office hours: TBD after poll
+Office hours: Friday, 1:00 PM-3:00 PM, Room 100 Atmospheric Sciences Building (Synoptic Lab)
 
 ## Course schedule
-Monday and Wednesday, 09:30-10:50, Foreign Languages Building G8A
+Monday and Wednesday, 09:30 AM-10:50 PM, Foreign Languages Building G8A
 
 ## Course description
 
@@ -33,7 +33,7 @@ This course focuses on the analysis of geophysical data sets using modern comput
 
 ###Required Text
 
-*Python Programming and Visualization for Scientists* by A. DeCaria. Available in the bookstore or online (link to [publisher](http://www.sundogpublishing.com/shop/python-programming-and-visualization-for-scientists-alex-decaria/)).
+*Python Programming and Visualization for Scientists* by A. DeCaria. Available in the bookstore or for purchase online (link to [publisher](http://www.sundogpublishing.com/shop/python-programming-and-visualization-for-scientists-alex-decaria/)).
 
 Our book has some corrections, which are available for download [here](http://www.sundogpublishing.com/PythonErrata.pdf).
 
@@ -83,7 +83,7 @@ You are highly encouraged to attend classes, however, I will not take attendance
 
 ## Course outline
 
-1. [**Jan 18**] Course logistics. Keeling introduction. Using your own computer for this course.  VPN.
+1. [**Jan 18**] Course logistics. Keeling introduction. Using your own computer for this course.  Using the Illinois CITES VPN.
 
 1. [**Jan 23, Jan 25**] Introduction to `unix`, handling, and editing files.
 
@@ -119,7 +119,7 @@ You are highly encouraged to attend classes, however, I will not take attendance
 
 ***Steve N. will be out of town at a Department of Energy Meeting 1 or 2 days that week.  Andrew H. will be the instructor.
 
-***Class may be postponed, cancelled, or presented by Andrew H. at short notice as Steve N.'s wife is expecting in April.  A notification will be sent out via e-mail.  
+***Class may be postponed, cancelled, or presented by Andrew H. at short notice as Steve N.'s wife is expecting in April.  A notification will be sent out via e-mail.
 
 ## Information for students with disabilities
 Disability Accommodations: to obtain disability-related academic adjustments and/or auxiliary aids, students with disabilities must contact the course instructor and the Disability Resources and Educational Services (DRES) as soon as possible. To contact DRES you may visit 1207 S. Oak St., Champaign, call 333-4603 (V/TTY), or e-mail a message to [disability@illinois.edu](mailto:disability@illinois.edu).
