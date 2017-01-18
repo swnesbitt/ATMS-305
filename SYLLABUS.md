@@ -22,6 +22,9 @@ E-mail: [ahuang11@illinois.edu](mailto:ahuang11@illinois.edu)
 
 Office hours: Friday, 1:00 PM-3:00 PM, Room 100 Atmospheric Sciences Building (Synoptic Lab)
 
+## Course web site
+[http://www.github.com/swnesbitt/ATMS-305](http://www.github.com/swnesbitt/ATMS-305)
+
 ## Course schedule
 Monday and Wednesday, 09:30 AM-10:50 PM, Foreign Languages Building G8A
 
