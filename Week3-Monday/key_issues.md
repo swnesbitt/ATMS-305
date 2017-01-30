@@ -8,7 +8,7 @@ Your *working directory* needs to be within the repository. For example: `/data/
 
 If you are one directory up, `git` will not find the repository.  
 
-If you run `git clone`, you are not in the repository.
+Note that if you run `git clone`, you are not in the repository.  You need to `cd repositoryname` there.
 
 **Tip:** use `pwd` to find your current working directory.
 
