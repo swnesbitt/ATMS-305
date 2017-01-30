@@ -1,0 +1,23 @@
+1.2. Keeling asks for the password of that random user. Incorrect password when 
+using regular AD password.
+
+2. bash: cd: blah: No such file or directory
+2.1. /data/atms305/a
+2.2. I see a lot of folders titled with netIDs. I think that these are all 
+of the students in the class that are registered on Keeling.
+2.4. I go back to my home directory.
+2.5. I get into the atms305 directory that has one folder in it, "a."
+2.6. "a" shows up when I print the contents.
+2.7. bash: cd: root: No such file or directory. I have access to all of 
+the folders that aren't root.
+2.8. You could also "cd /data/atms305/a/kjhand2" or just "cd ~".
+
+3.1. The file type of my inittab is ASCII English Text.
+3.2. The default mode of my computer is 3, full multiuser mode.
+3.4. "." is a directory, the current directory we are in.
+3.5. "cat ." states . is a directory.
+3.6. There are 534 items in /etc/passwd.
+
+4.5. More info can be found by googling it or reading more of the man 
+pages for cd. 
+

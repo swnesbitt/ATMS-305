@@ -1,0 +1,1141 @@
+hosts.allow_std               smart
+hosts.bak                     smartd.conf
+hosts.deny                    smi.conf
+hosts.deny_maint              snmp
+hosts.deny_std                sos.conf
+hosts.equiv                   sound
+hp                            ssh
+html2psrc                     ssl
+httpd                         sssd
+idmapd.conf                   statetab
+infiniband-diags              statetab.d
+init                          subversion
+init.conf                     sudo-ldap.conf
+init.d                        sudo.conf
+inittab                       sudoers
+inputrc                       sudoers.d
+ipa                           sudoers.rpmnew
+iproute2                      sysconfig
+ipsec.conf                    sysctl.conf
+ipsec.d                       sysctl.conf.rpmnew
+ipsec.secrets                 sysctl.d
+iptables.local                system-release
+iscsi                         system-release-cpe
+isdn                          terminfo
+issue                         texinfo
+issue.net                     texmf
+java                          torque
+joe                           tune-profiles
+jvm                           tuned.conf
+jvm-commmon                   udev
+kde                           udev.d
+kdump-adv-conf                unbound
+kdump.conf                    updatedb.conf
+krb5.conf                     updatedb.conf.rpmnew
+ktune.d                       vbox
+latrace.conf                  vdpau_wrapper.cfg
+latrace.d                     vimrc
+ld.so.cache                   virc
+ld.so.conf                    warnquota.conf
+ld.so.conf.d                  webalizer.conf
+lftp.conf                     wgetrc
+libaudit.conf                 xdg
+libibverbs.d                  xinetd.conf
+libnl                         xinetd.d
+libpaper.d                    xml
+libreport                     yp.conf
+libsmbios                     yum
+libuser.conf                  yum.conf
+libvirt                       yum.repos.d
+localtime                     zabbix
+login.defs
+kjhand2@keeling etc: $ file inittab
+inittab: ASCII English text
+kjhand2@keeling etc: $ cat inittab
+# inittab is only used by upstart for the default runlevel.
+#
+# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
+#
+# System initialization is started by /etc/init/rcS.conf
+#
+# Individual runlevels are started by /etc/init/rc.conf
+#
+# Ctrl-Alt-Delete is handled by /etc/init/control-alt-delete.conf
+#
+# Terminal gettys are handled by /etc/init/tty.conf and 
+/etc/init/serial.conf,
+# with configuration in /etc/sysconfig/init.
+#
+# For information on how to write upstart event handlers, or how
+# upstart works, see init(5), init(8), and initctl(8).
+#
+# Default runlevel. The runlevels used are:
+#   0 - halt (Do NOT set initdefault to this)
+#   1 - Single user mode
+#   2 - Multiuser, without NFS (The same as 3, if you do not have 
+networking)
+#   3 - Full multiuser mode
+#   4 - unused
+#   5 - X11
+#   6 - reboot (Do NOT set initdefault to this)
+#
+id:3:initdefault:
+kjhand2@keeling etc: $ file inittab
+inittab: ASCII English text
+kjhand2@keeling etc: $ file .
+.: directory
+kjhand2@keeling etc: $ cat .
+cat: .: Is a directory
+kjhand2@keeling etc: $ cat --help
+Usage: cat [OPTION]... [FILE]...
+Concatenate FILE(s), or standard input, to standard output.
+
+  -A, --show-all           equivalent to -vET
+  -b, --number-nonblank    number nonempty output lines
+  -e                       equivalent to -vE
+  -E, --show-ends          display $ at end of each line
+  -n, --number             number all output lines
+  -s, --squeeze-blank      suppress repeated empty output lines
+  -t                       equivalent to -vT
+  -T, --show-tabs          display TAB characters as ^I
+  -u                       (ignored)
+  -v, --show-nonprinting   use ^ and M- notation, except for LFD and TAB
+      --help     display this help and exit
+      --version  output version information and exit
+
+With no FILE, or when FILE is -, read standard input.
+
+Examples:
+  cat f - g  Output f's contents, then standard input, then g's contents.
+  cat        Copy standard input to standard output.
+
+Report cat bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+Report cat translation bugs to <http://translationproject.org/team/>
+For complete documentation, run: info coreutils 'cat invocation'
+kjhand2@keeling etc: $ cat -n /etc/passwd
+     1	root:x:0:0:root:/root:/bin/bash
+     2	bin:x:1:1:bin:/bin:/sbin/nologin
+     3	daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4	adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5	lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6	sync:x:5:0:sync:/sbin:/bin/sync
+     7	shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8	halt:x:7:0:halt:/sbin:/sbin/halt
+     9	mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10	uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11	operator:x:11:0:operator:/root:/sbin/nologin
+    12	games:x:12:100:games:/usr/games:/sbin/nologin
+    13	gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14	ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15	nobody:x:99:99:Nobody:/:/sbin/nologin
+    16	dbus:x:81:81:System message bus:/:/sbin/nologin
+    17	rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    18	vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    19	apache:x:48:48:Apache:/var/www:/sbin/nologin
+    20	postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    21	ntp:x:38:38::/etc/ntp:/sbin/nologin
+    22	avahi:x:70:70:Avahi mDNS/DNS-SD 
+Stack:/var/run/avahi-daemon:/sbin/nologin
+    23	rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24	haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    25	gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    26	webalizer:x:67:67:Webalizer:/var/www/usage:/sbin/nologin
+    27	sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    28	tcpdump:x:72:72::/:/sbin/nologin
+    29	oprofile:x:16:16:Special user account to be used by 
+OProfile:/home/oprofile:/sbin/nologin
+    30	clout:x:95:95::/sw/clout:/bin/bash
+    31	usbmuxd:x:113:113:usbmuxd user,(local):/:/sbin/nologin
+    32	munge:x:495:488:Runs Uid 'N' Gid 
+Emporium,(local):/var/run/munge:/sbin/nologin
+    33	slurm:x:409:500:slurm user,(local):/home/slurm:/bin/bash
+    34	zabbix:x:408:486:Zabbix Monitoring 
+System,(local):/var/lib/zabbix:/sbin/nologin
+    35	unbound:x:407:484:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+    36	saslauth:x:406:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    37	avahi-autoipd:x:170:170:Avahi IPv4LL 
+Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    38	juprox-svc:x:533:533:Jupyter Proxy Service Account 
+(local):/data/keeling/a/juprox-svc:/bin/bash
+    39	acsprin2:x:853273:1693997:Springer, Adam 
+C:/data/keeling/a/acsprin2:/bin/tcsh
+    40	actaylo2:x:372081:1444905:Taylor, Alexander 
+C:/data/keeling/a/actaylo2:/bin/tcsh
+    41	adwyer6:x:364419:1549073:Dwyer, Adam 
+Arman:/data/keeling/a/adwyer6:/bin/bash
+    42	aedwards:x:233165:1444992:Christensen, Amanda 
+J:/data/keeling/a/aedwards:/bin/tcsh
+    43	afsalaz2:x:175074:1549073:Salazar, Alexander 
+Fabrizzio:/data/keeling/a/afsalaz2:/bin/bash
+    44	ahahne2:x:367166:1445029:Hahne, Alexander 
+P:/data/keeling/a/ahahne2:/bin/tcsh
+    45	ahasic1:x:459123:1444925:Ahasic, Eric 
+T:/data/keeling/a/ahasic1:/bin/tcsh
+    46	ahende26:x:379186:1954896:Henderson, Alexander 
+Max:/data/keeling/a/ahende26:/bin/bash
+    47	ahertel:x:272309:1445029:Stoner, Annemarie 
+Koch:/data/keeling/a/ahertel:/bin/tcsh
+    48	ahuang11:x:514662:1444994:Huang, Andrew 
+K:/data/keeling/a/ahuang11:/bin/bash
+    49	ajerwin2:x:616208:2032973:Erwin, Alexander 
+Joel:/data/keeling/a/ajerwin2:/bin/bash
+    50	akhoday2:x:433853:1445029:Khodayari, 
+Arezoo:/data/keeling/a/akhoday2:/bin/tcsh
+    51	akrause3:x:885107:1809355:Krause, Ari 
+Matthew:/data/keeling/a/akrause3:/bin/bash
+    52	alammer2:x:788415:1693997:Lammers, Andrew 
+R:/data/keeling/a/alammer2:/bin/tcsh
+    53	aljones4:x:427643:1444926:Jones, Alexandra 
+L:/data/keeling/a/aljones4:/bin/tcsh
+    54	aman3:x:333330:1549053:Man, Albert 
+Xingyi:/data/keeling/a/aman3:/bin/tcsh
+    55	amanders:x:412577:1721318:Anders, Alison 
+M:/data/keeling/a/amanders:/bin/tcsh
+    56	ame3:x:235244:1954896:Elizondo, Antonio 
+M:/data/keeling/a/ame3:/bin/bash
+    57	ammarch2:x:718950:1693997:Marchi, Angelica 
+Maria:/data/keeling/a/ammarch2:/bin/tcsh
+    58	ammurph2:x:852503:1444987:Murphy, Amanda 
+Marie:/data/keeling/a/ammurph2:/bin/tcsh
+    59	andyvanl:x:394762:1444905:VanLoocke, Andrew 
+D:/data/keeling/a/andyvanl:/bin/tcsh
+    60	anniequ:x:491316:1549050:Qu, 
+Peiyong:/data/keeling/a/anniequ:/bin/tcsh
+    61	anorets:x:839423:1549045:Norets, 
+Andriy:/data/keeling/a/anorets:/bin/tcsh
+    62	apurv2:x:992585:1809355:Apurv, 
+Tushar:/data/keeling/a/apurv2:/bin/bash
+    63	arm:x:591083:1941507:Miller, Alexander 
+Rossi:/data/keeling/a/arm:/bin/tcsh
+    64	aschulz2:x:812408:1444992:Schulz, Amanda 
+R:/data/keeling/a/aschulz2:/bin/tcsh
+    65	asmith14:x:827693:1444905:Smith, Aaron 
+David:/data/keeling/a/asmith14:/bin/tcsh
+    66	
+atmos-akhoday2:x:1732923:1445029:atmos-akhoday2:/data/keeling/a/atmos-akhoday2:/bin/tcsh
+    67	
+atmos-aljones4:x:1847405:1444926:atmos-aljones4:/data/keeling/a/atmos-aljones4:/bin/tcsh
+    68	
+atmos-astoner:x:1848285:1445029:atmos-astoner:/data/keeling/a/atmos-astoner:/bin/tcsh
+    69	
+atmos-belmasri:x:1549085:1444936:atmos-belmasri:/data/keeling/a/atmos-belmasri:/bin/tcsh
+    70	
+atmos-brodzik:x:1943647:1472749:atmos-brodzik:/data/keeling/a/atmos-brodzik:/bin/tcsh
+    71	
+atmos-carlosmgd5:x:1549097:1445015:atmos-carlosmgd5:/data/keeling/a/atmos-carlosmgd5:/bin/tcsh
+    72	
+atmos-catherine:x:1549078:1444926:atmos-catherine:/data/keeling/a/atmos-catherine:/bin/tcsh
+    73	
+atmos-ching1:x:1543937:1444980:atmos-ching1:/data/keeling/a/atmos-ching1:/bin/tcsh
+    74	
+atmos-cohaney2:x:1814189:1444926:atmos-cohaney2:/data/keeling/a/atmos-cohaney2:/bin/tcsh
+    75	
+atmos-emeyers3:x:1549090:1444966:atmos-emeyers3:/data/keeling/a/atmos-emeyers3:/bin/tcsh
+    76	
+atmos-gacek1:x:1549095:1444980:atmos-gacek1:/data/keeling/a/atmos-gacek1:/bin/tcsh
+    77	
+atmos-gbala:x:1549089:1549089:atmos-gbala:/data/keeling/a/atmos-gbala:/bin/tcsh
+    78	
+atmos-goodma13:x:1549098:1445029:atmos-goodma13:/data/keeling/a/atmos-goodma13:/bin/tcsh
+    79	
+atmos-hwang4:x:1549091:1444966:atmos-hwang4:/data/keeling/a/atmos-hwang4:/bin/tcsh
+    80	
+atmos-hzhang5:x:1549092:1444966:atmos-hzhang5:/data/keeling/a/atmos-hzhang5:/bin/tcsh
+    81	
+atmos-jtraite2:x:1549096:1445009:atmos-jtraite2:/data/keeling/a/atmos-jtraite2:/bin/tcsh
+    82	
+atmos-kaufeld2:x:1543938:1445015:atmos-kaufeld2:/data/keeling/a/atmos-kaufeld2:/bin/tcsh
+    83	
+atmos-kfa09002:x:1814190:1444936:atmos-kfa09002:/data/keeling/a/atmos-kfa09002:/bin/tcsh
+    84	
+atmos-kjmuelle:x:1549079:1444926:atmos-kjmuelle:/data/keeling/a/atmos-kjmuelle:/bin/tcsh
+    85	
+atmos-kyo:x:1549099:1445029:atmos-kyo:/data/keeling/a/atmos-kyo:/bin/tcsh
+    86	
+atmos-lliang4:x:1549080:1444926:atmos-lliang4:/data/keeling/a/atmos-lliang4:/bin/tcsh
+    87	
+atmos-longcao:x:1549086:1444936:atmos-longcao:/data/keeling/a/atmos-longcao:/bin/tcsh
+    88	
+atmos-mascio2:x:1549093:1444966:atmos-mascio2:/data/keeling/a/atmos-mascio2:/bin/tcsh
+    89	
+atmos-mauno:x:1549094:1444966:atmos-mauno:/data/keeling/a/atmos-mauno:/bin/tcsh
+    90	
+atmos-mjwilso2:x:1549081:1444926:atmos-mjwilso2:/data/keeling/a/atmos-mjwilso2:/bin/tcsh
+    91	
+atmos-mlliang:x:1549087:1444936:atmos-mlliang:/data/keeling/a/atmos-mlliang:/bin/tcsh
+    92	
+atmos-odohert2:x:1744475:1444980:atmos-odohert2:/data/keeling/a/atmos-odohert2:/bin/tcsh
+    93	
+atmos-protack:x:1549083:1444926:atmos-protack:/data/keeling/a/atmos-protack:/bin/tcsh
+    94	
+atmos-rjackso2:x:1681248:1444966:atmos-rjackso2:/data/keeling/a/atmos-rjackso2:/bin/tcsh
+    95	
+atmos-rt:x:252933:1444987:atmos-rt:/data/keeling/a/atmos-rt:/bin/tcsh
+    96	
+atmos-sgahlot2:x:1696775:1444936:atmos-sgahlot2:/data/keeling/a/atmos-sgahlot2:/bin/tcsh
+    97	
+atmos-solsen:x:1552600:1445029:atmos-solsen:/data/keeling/a/atmos-solsen:/bin/tcsh
+    98	
+atmos-sssu0920:x:1543940:1445029:atmos-sssu0920:/data/keeling/a/atmos-sssu0920:/bin/tcsh
+    99	
+atmos-sstrey2:x:1967330:1444940:atmos-sstrey2:/data/keeling/a/atmos-sstrey2:/bin/bash
+   100	
+atmos-xyang5:x:1549088:1444936:atmos-xyang5:/data/keeling/a/atmos-xyang5:/bin/tcsh
+   101	
+atmos-yyang11:x:1549082:1444926:atmos-yyang11:/data/keeling/a/atmos-yyang11:/bin/tcsh
+   102	aurelio2:x:166257:1549044:Aurelio Duarte, Joao Bernardo 
+Neto:/data/keeling/a/aurelio2:/bin/tcsh
+   103	avescob2:x:350882:1954896:Escobar, Alexandra 
+Victoria:/data/keeling/a/avescob2:/bin/bash
+   104	awhitfi2:x:334239:1549073:Whitfield, Allison 
+Rose:/data/keeling/a/awhitfi2:/bin/bash
+   105	awisdom2:x:388696:1444966:Dooley, Amanda 
+Louise:/data/keeling/a/awisdom2:/bin/tcsh
+   106	balamut2:x:611191:1549053:Balamuta, James 
+Joseph:/data/keeling/a/balamut2:/bin/tcsh
+   107	battagl1:x:461178:1445015:Battaglia, Steven 
+Michael:/data/keeling/a/battagl1:/bin/tcsh
+   108	bceng2:x:581985:1444926:Eng, Benjamin 
+Chee-Tak:/data/keeling/a/bceng2:/bin/tcsh
+   109	bdmorri2:x:333373:1444905:Morrison, Bailey 
+Danielle:/data/keeling/a/bdmorri2:/bin/tcsh
+   110	bdrewn2:x:169881:1445029:Bye, Beth 
+Amy:/data/keeling/a/bdrewn2:/bin/tcsh
+   111	beiyang2:x:801401:1549044:Yang, 
+Bei:/data/keeling/a/beiyang2:/bin/tcsh
+   112	belcher1:x:875669:1445029:Belcher, David 
+P:/data/keeling/a/belcher1:/bin/tcsh
+   113	belmasri:x:341112:1444936:El-Masri, 
+Bassil:/data/keeling/a/belmasri:/bin/tcsh
+   114	bguaren2:x:305883:1444905:Guarente, Bryan 
+Andrew:/data/keeling/a/bguaren2:/bin/tcsh
+   115	binlin2:x:395825:1549043:Lin, 
+Bin:/data/keeling/a/binlin2:/bin/tcsh
+   116	bjewett:x:107538:1693997:Jewett, Brian 
+Ford:/data/keeling/a/bjewett:/bin/tcsh
+   117	bjorn:x:536963:1444936:Brooks, 
+Bjorn-Gustaf:/data/keeling/a/bjorn:/bin/tcsh
+   118	bketter2:x:973599:1954896:Ketter, Bridget 
+Rose:/data/keeling/a/bketter2:/bin/bash
+   119	blancha2:x:766133:1444980:Johnson, Alexandria 
+Vincenza:/data/keeling/a/blancha2:/bin/tcsh
+   120	bluemoon:x:101132:1549042:Owens, Dawn 
+C:/data/keeling/a/bluemoon:/bin/tcsh
+   121	bmwelch3:x:635727:1444925:Welch, Brittany 
+Marie:/data/keeling/a/bmwelch3:/bin/bash
+   122	bose8:x:769883:1444926:Bose, 
+Suchismita:/data/keeling/a/bose8:/bin/tcsh
+   123	brmarsh2:x:137492:1444925:Marsh, Benjamin 
+Robert:/data/keeling/a/brmarsh2:/bin/tcsh
+   124	bryce2:x:309066:1549046:Bryce, William 
+A:/data/keeling/a/bryce2:/bin/tcsh
+   125	buiatti2:x:543559:1549044:Buiatti, 
+Cesare:/data/keeling/a/buiatti2:/bin/tcsh
+   126	burns7:x:606070:606070:Burns, Adam 
+J:/data/keeling/a/burns7:/bin/tcsh
+   127	bvegawe2:x:374939:1444994:Vega-Westhoff, Benjamin 
+Aaron:/data/keeling/a/bvegawe2:/bin/tcsh
+   128	capota1:x:472972:1444936:Capota, 
+David:/data/keeling/a/capota1:/bin/tcsh
+   129	castell8:x:933770:1444980:Castelli, Anthony 
+J:/data/keeling/a/castell8:/bin/tcsh
+   130	ccchang3:x:516711:1445034:Chang, 
+Chuan-Chieh:/data/keeling/a/ccchang3:/bin/tcsh
+   131	cchang57:x:152436:1445040:Chang, 
+Ching:/data/keeling/a/cchang57:/bin/tcsh
+   132	cdpham2:x:468658:1444966:Pham, Casey 
+Duy:/data/keeling/a/cdpham2:/bin/tcsh
+   133	cepetrs2:x:356116:1444905:Peters, Claire 
+E:/data/keeling/a/cepetrs2:/bin/tcsh
+   134	cermak1:x:474900:1444925:Cermak, Timothy 
+R:/data/keeling/a/cermak1:/bin/tcsh
+   135	cervari2:x:245769:1444936:Cervarich, Matthew 
+Charles:/data/keeling/a/cervari2:/bin/tcsh
+   136	cfang9:x:255449:1549044:Fang, 
+Chiyuan:/data/keeling/a/cfang9:/bin/tcsh
+   137	chastee1:x:872964:1444925:Chasteen, Manda 
+Beth:/data/keeling/a/chastee1:/bin/tcsh
+   138	chehak2:x:478710:2032973:Chehak, Devin 
+Andrew:/data/keeling/a/chehak2:/bin/bash
+   139	ching1:x:453760:1444980:Ching, Ping 
+Pui:/data/keeling/a/ching1:/bin/tcsh
+   140	choate2:x:877332:1693997:Choate, Jessica 
+J:/data/keeling/a/choate2:/bin/tcsh
+   141	chwhite2:x:651880:1444966:White, Charles 
+H:/data/keeling/a/chwhite2:/bin/tcsh
+   142	chzheng:x:403077:1445043:Zheng, 
+Chen:/data/keeling/a/chzheng:/bin/tcsh
+   143	cigelni2:x:464339:1549073:Cigelnik, Benjamin 
+D:/data/keeling/a/cigelni2:/bin/bash
+   144	cjjhnst2:x:119020:1444925:Johnston, Christopher 
+John:/data/keeling/a/cjjhnst2:/bin/bash
+   145	clipp2:x:944467:1444926:Clipp, Landon 
+Thane:/data/keeling/a/clipp2:/bin/tcsh
+   146	cmendes:x:163391:1444936:Mendes, Celso 
+L:/data/keeling/a/cmendes:/bin/tcsh
+   147	cmmills2:x:427664:1444940:Mills, 
+Catrin:/data/keeling/a/cmmills2:/bin/tcsh
+   148	cohaney2:x:381889:1444926:Haney, Conor 
+O:/data/keeling/a/cohaney2:/bin/tcsh
+   149	colberg1:x:773944:1445015:Colberg, Jessica 
+Shirley:/data/keeling/a/colberg1:/bin/tcsh
+   150	conrad8:x:877134:1444925:Conrad, Dustin 
+M:/data/keeling/a/conrad8:/bin/tcsh
+   151	crcharl2:x:553172:1954896:Charles, Cole 
+R:/data/keeling/a/crcharl2:/bin/bash
+   152	crrdrwl2:x:107039:1711607:Corredor Waldron, Adriana 
+Maria:/data/keeling/a/crrdrwl2:/bin/tcsh
+   153	crrllsm2:x:910005:1472750:Carroll-Smith, 
+Dereka:/data/keeling/a/crrllsm2:/bin/tcsh
+   154	crwlyfr2:x:416583:1444926:CrowleyFarenga, Remy Michael 
+John:/data/keeling/a/crwlyfr2:/bin/tcsh
+   155	cwang138:x:145348:1444936:Wang, 
+Chen:/data/keeling/a/cwang138:/bin/tcsh
+   156	czhang15:x:711373:1549044:Zhang, 
+Cong:/data/keeling/a/czhang15:/bin/tcsh
+   157	dab3:x:445322:1445010:Becker, Douglas 
+Allen:/data/keeling/a/dab3:/bin/bash
+   158	dairui:x:242719:1444936:Chen, 
+Dairui:/data/keeling/a/dairui:/bin/tcsh
+   159	dajacks1:x:192451:1444926:Jackson, Daeven 
+Alexander:/data/keeling/a/dajacks1:/bin/tcsh
+   160	dalpiaz2:x:317454:1549051:Dalpiaz, David 
+M:/data/keeling/a/dalpiaz2:/bin/tcsh
+   161	davidk5:x:787704:1444905:King, 
+David:/data/keeling/a/davidk5:/bin/bash
+   162	davids11:x:880915:1444905:Davidson, Samantha 
+H:/data/keeling/a/davids11:/bin/tcsh
+   163	davidw:x:109823:1445048:Wojtowicz, David P 
+Jr:/data/keeling/a/davidw:/bin/bash
+   164	dcallic2:x:410723:1445009:Callicutt, David 
+John:/data/keeling/a/dcallic2:/bin/tcsh
+   165	dcarval2:x:232690:1549044:Baerlocher Carvalho, 
+Diogo:/data/keeling/a/dcarval2:/bin/tcsh
+   166	dchug2:x:258303:1688625:Chug, 
+Divyansh:/data/keeling/a/dchug2:/bin/tcsh
+   167	dciuro:x:494990:1445029:Ciuro Sanchez, Darienne 
+M:/data/keeling/a/dciuro:/bin/tcsh
+   168	dem2:x:437617:1445034:Miller, Douglas 
+Edward:/data/keeling/a/dem2:/bin/tcsh
+   169	dfu3:x:676157:1444926:Fu, Dongwei:/data/keeling/a/dfu3:/bin/tcsh
+   170	dgs:x:106103:1549052:Simpson, Douglas 
+G:/data/keeling/a/dgs:/bin/tcsh
+   171	dhamlin2:x:710032:1954896:Hamlin, 
+Donny:/data/keeling/a/dhamlin2:/bin/tcsh
+   172	dhence:x:337645:1472749:Hence, 
+Deanna:/data/keeling/a/dhence:/bin/tcsh
+   173	dhowell2:x:305567:1445009:Howell, David 
+Emmett:/data/keeling/a/dhowell2:/bin/tcsh
+   174	diejin2:x:522262:1549073:Jin, 
+Die:/data/keeling/a/diejin2:/bin/bash
+   175	dill1:x:772570:1445015:Reed, Kimberly 
+Ann:/data/keeling/a/dill1:/bin/tcsh
+   176	dkim136:x:309626:1472750:Kim, Dong 
+Wan:/data/keeling/a/dkim136:/bin/tcsh
+   177	dmoser2:x:319081:1472751:Moser, Daniel 
+Helaman:/data/keeling/a/dmoser2:/bin/tcsh
+   178	dorlandi:x:554110:1472749:Orlandi, Daniel 
+Pinheiro:/data/keeling/a/dorlandi:/bin/tcsh
+   179	dpetrsn2:x:768376:1549073:Peterson, Daniel 
+M:/data/keeling/a/dpetrsn2:/bin/bash
+   180	dplumme2:x:343554:1444987:Plummer, 
+David:/data/keeling/a/dplumme2:/bin/tcsh
+   181	dportis:x:109641:1444940:Portis, Diane 
+H:/data/keeling/a/dportis:/bin/tcsh
+   182	drastog2:x:869381:1445009:Rastogi, 
+Deeksha:/data/keeling/a/drastog2:/bin/tcsh
+   183	dsewell2:x:407655:1549059:Sewell, Daniel 
+K:/data/keeling/a/dsewell2:/bin/tcsh
+   184	dtan9:x:736496:1549044:Tan, Ding 
+Yong:/data/keeling/a/dtan9:/bin/tcsh
+   185	dwang20:x:392173:1445029:Wang, 
+Dong:/data/keeling/a/dwang20:/bin/tcsh
+   186	dyoun:x:340150:1445029:Youn, Daeok:/data/keeling/a/dyoun:/bin/tcsh
+   187	
+earth-kpatten:x:1962421:1445048:earth-kpatten:/data/keeling/a/earth-kpatten:/bin/bash
+   188	eawrght2:x:200030:1954896:Wright, Emily 
+Anne:/data/keeling/a/eawrght2:/bin/bash
+   189	ecollin2:x:836490:1445029:Collins, Ethan 
+M:/data/keeling/a/ecollin2:/bin/tcsh
+   190	eehogan2:x:753419:1444994:Hogan, Emily 
+Elizabeth:/data/keeling/a/eehogan2:/bin/tcsh
+   191	ehtelzer:x:844494:1682273:Telzer, 
+Eva:/data/keeling/a/ehtelzer:/bin/tcsh
+   192	eilts2:x:955539:1954896:Eilts, Stephanie 
+Marie:/data/keeling/a/eilts2:/bin/bash
+   193	ejansse2:x:228969:1445029:Schlie, Emily 
+Elizabeth-Janssen:/data/keeling/a/ejansse2:/bin/tcsh
+   194	emmccor2:x:896221:1682273:McCormick, Ethan 
+M:/data/keeling/a/emmccor2:/bin/tcsh
+   195	engelse2:x:198993:1472751:Engelsen, Bryan 
+Nicholas:/data/keeling/a/engelse2:/bin/tcsh
+   196	ereynol4:x:430102:1549042:Reynolds, Evangeline 
+Mae:/data/keeling/a/ereynol4:/bin/tcsh
+   197	escobed2:x:281146:1549042:Escobedo Paredes, Luis 
+Alfonso:/data/keeling/a/escobed2:/bin/tcsh
+   198	esfahani:x:110968:1549043:Esfahani, Hadi 
+S:/data/keeling/a/esfahani:/bin/tcsh
+   199	eunyi:x:883860:1711607:Chung, Eun 
+Yi:/data/keeling/a/eunyi:/bin/tcsh
+   200	feely2:x:165745:1549042:Hutson, Ashley Colleen 
+Feely:/data/keeling/a/feely2:/bin/tcsh
+   201	ferguso8:x:608838:608838:Ferguson, Alex 
+Page:/data/keeling/a/ferguso8:/bin/tcsh
+   202	fever2:x:393722:1954896:Fever, Shayna 
+Kay:/data/keeling/a/fever2:/bin/bash
+   203	finlon2:x:796046:1444987:Finlon, Joseph 
+A:/data/keeling/a/finlon2:/bin/bash
+   204	fitzpa15:x:877747:1444966:Fitzpatrick, Andrea 
+M:/data/keeling/a/fitzpa15:/bin/tcsh
+   205	floess:x:195307:1809355:Floess, Emily 
+Marie:/data/keeling/a/floess:/bin/bash
+   206	frame:x:811533:1444925:Frame, 
+Jeffrey:/data/keeling/a/frame:/bin/tcsh
+   207	francina:x:198254:1688625:Dominguez, 
+Francina:/data/keeling/a/francina:/bin/tcsh
+   208	fritz7:x:771619:1445034:Fritz, Cody 
+Lee:/data/keeling/a/fritz7:/bin/tcsh
+   209	fzhao4:x:167720:1445043:Zhao, 
+Fangruo:/data/keeling/a/fzhao4:/bin/tcsh
+   210	gacek1:x:458853:1444980:Gacek, Zaneta 
+Karolina:/data/keeling/a/gacek1:/bin/tcsh
+   211	gaduffy2:x:531626:1445015:Duffy, George 
+A:/data/keeling/a/gaduffy2:/bin/tcsh
+   212	gdi:x:148507:1444926:Di Girolamo, 
+Larry:/data/keeling/a/gdi:/bin/tcsh
+   213	gdiaz10:x:590684:1444936:Diaz, Gerardo 
+Jr:/data/keeling/a/gdiaz10:/bin/tcsh
+   214	geegan:x:189518:1444926:Geegan, Shannon 
+M:/data/keeling/a/geegan:/bin/tcsh
+   215	
+geol-jstraub:x:1948732:1445040:geol-jstraub:/data/keeling/a/geol-jstraub:/bin/tcsh
+   216	gewing:x:257454:1445015:Ewing, Gabriel 
+A:/data/keeling/a/gewing:/bin/tcsh
+   217	giesler2:x:372031:1444966:Giesler, Coreen 
+M:/data/keeling/a/giesler2:/bin/tcsh
+   218	gilmore1:x:271533:1444966:Gilmore, Matthew 
+Scott:/data/keeling/a/gilmore1:/bin/tcsh
+   219	gleiche1:x:484065:1445015:Harnos, Kirstin 
+Joy:/data/keeling/a/gleiche1:/bin/tcsh
+   220	gmarion2:x:304575:1472750:Marion, Geoffrey 
+R:/data/keeling/a/gmarion2:/bin/tcsh
+   221	gmarshll:x:841716:1693900:Marshall, 
+Guillermo:/data/keeling/a/gmarshll:/bin/tcsh
+   222	grigory2:x:155966:1549044:Grigoryan, 
+Aram:/data/keeling/a/grigory2:/bin/tcsh
+   223	gu17:x:773901:1549045:Gu, Jiaying:/data/keeling/a/gu17:/bin/tcsh
+   224	guerrer4:x:461387:1444916:Guerrero, Spencer 
+White:/data/keeling/a/guerrer4:/bin/tcsh
+   225	gwarnold:x:111880:111880:Arnold, Galen 
+Wesley:/data/keeling/a/gwarnold:/bin/tcsh
+   226	gzhang13:x:448097:1445034:Zhang, 
+Gan:/data/keeling/a/gzhang13:/bin/tcsh
+   227	gzhao1:x:156788:1444926:Zhao, 
+Guangyu:/data/keeling/a/gzhao1:/bin/tcsh
+   228	gzheng:x:149398:1444936:Zheng, 
+Gengbin:/data/keeling/a/gzheng:/bin/tcsh
+   229	hanglei2:x:386171:1445029:Lei, 
+Hang:/data/keeling/a/hanglei2:/bin/tcsh
+   230	hanzhang:x:448784:1444936:Zhang, 
+Han:/data/keeling/a/hanzhang:/bin/bash
+   231	haow:x:402748:1444980:Wu, Hao:/data/keeling/a/haow:/bin/bash
+   232	harnos1:x:490793:1445015:Harnos, Daniel 
+Sean:/data/keeling/a/harnos1:/bin/tcsh
+   233	he3:x:367553:1549057:He, Yifeng:/data/keeling/a/he3:/bin/tcsh
+   234	heffner1:x:877567:1444936:Heffner, Lauraleigh 
+A:/data/keeling/a/heffner1:/bin/tcsh
+   235	heistand:x:870006:1809355:Heistand, 
+Glenn:/data/keeling/a/heistand:/bin/bash
+   236	hfogle2:x:135856:1954896:Fogle, Hannah 
+Marie:/data/keeling/a/hfogle2:/bin/bash
+   237	hgilani:x:942689:1444936:Gilani, 
+Hammad:/data/keeling/a/hgilani:/bin/bash
+   238	hhu18:x:642892:1688625:Hu, Huancui:/data/keeling/a/hhu18:/bin/tcsh
+   239	hirani:x:351457:1682274:Hirani, Anil 
+Nirmal:/data/keeling/a/hirani:/bin/tcsh
+   240	hminor:x:257639:1444992:Minor, Hilary 
+Ann:/data/keeling/a/hminor:/bin/tcsh
+   241	hmm2:x:389911:1472751:Mallinson, Holly 
+M:/data/keeling/a/hmm2:/bin/tcsh
+   242	houghto1:x:480658:1444926:Houghton, Allison 
+Nicole:/data/keeling/a/houghto1:/bin/tcsh
+   243	hsieh32:x:929248:1444966:Hsieh, 
+Tsung-Lin:/data/keeling/a/hsieh32:/bin/tcsh
+   244	huachen:x:757162:1445034:Chen, 
+Hua:/data/keeling/a/huachen:/bin/tcsh
+   245	hughes18:x:495257:1444980:Hughes, Michael 
+Patrick:/data/keeling/a/hughes18:/bin/tcsh
+   246	huili7:x:632032:1444994:Li, Hui:/data/keeling/a/huili7:/bin/tcsh
+   247	hunzing2:x:785809:1472749:Hunzinger, Alexis 
+E:/data/keeling/a/hunzing2:/bin/tcsh
+   248	hwang247:x:670535:1549044:Wang, 
+Haoxi:/data/keeling/a/hwang247:/bin/tcsh
+   249	hwang4:x:206234:1444966:Wang, 
+Hailong:/data/keeling/a/hwang4:/bin/tcsh
+   250	hwang88:x:493032:493032:Hwang, Jerome 
+K:/data/keeling/a/hwang88:/bin/tcsh
+   251	hyang31:x:388530:1444966:Yang, Hee 
+Jung:/data/keeling/a/hyang31:/bin/tcsh
+   252	hzhang5:x:186457:1444966:Zhang, 
+Henian:/data/keeling/a/hzhang5:/bin/tcsh
+   253	idooley2:x:305539:305539:Dooley, Isaac 
+J:/data/keeling/a/idooley2:/bin/tcsh
+   254	ihankes2:x:429676:1445034:Hankes, Isaac 
+E:/data/keeling/a/ihankes2:/bin/tcsh
+   255	inkoocho:x:148051:1549044:Cho, 
+In-Koo:/data/keeling/a/inkoocho:/bin/tcsh
+   256	isingh9:x:179094:1688625:Singh, 
+Itinderjot:/data/keeling/a/isingh9:/bin/tcsh
+   257	j-walsh2:x:113023:1444940:Walsh, John E 
+Jr:/data/keeling/a/j-walsh2:/bin/tcsh
+   258	jain1:x:113101:1444936:Jain, Atul:/data/keeling/a/jain1:/bin/tcsh
+   259	jaja2:x:902697:1549073:Jaja, Lydia 
+Synclaire:/data/keeling/a/jaja2:/bin/bash
+   260	janszsk2:x:891549:1444987:Janiszeski, Andrew 
+R:/data/keeling/a/janszsk2:/bin/tcsh
+   261	jcbeck2:x:415040:1444980:Beck, Jeffrey 
+Carlton:/data/keeling/a/jcbeck2:/bin/tcsh
+   262	jcjurev2:x:464818:1549073:Jurevis, Jonathan 
+C:/data/keeling/a/jcjurev2:/bin/bash
+   263	jcurtis2:x:137543:1444980:Curtis, Jeffrey 
+Henry:/data/keeling/a/jcurtis2:/bin/tcsh
+   264	jdavison:x:169429:1444992:Davison, Jennifer 
+L:/data/keeling/a/jdavison:/bin/tcsh
+   265	jdong14:x:240368:1444966:Dong, 
+Jiayin:/data/keeling/a/jdong14:/bin/tcsh
+   266	jdruhan:x:733249:1536655:Druhan, 
+Jennifer:/data/keeling/a/jdruhan:/bin/tcsh
+   267	jgrim:x:195727:1444966:Grim, Joseph 
+A:/data/keeling/a/jgrim:/bin/tcsh
+   268	jhampto3:x:384926:1444992:Hampton, Justin 
+Alexander:/data/keeling/a/jhampto3:/bin/tcsh
+   269	jhu16:x:585050:1445040:Hu, Jiashun:/data/keeling/a/jhu16:/bin/tcsh
+   270	jingjin4:x:641936:1445043:Jin, 
+Jing:/data/keeling/a/jingjin4:/bin/tcsh
+   271	jlai11:x:664833:1721318:Lai, 
+Jingtao:/data/keeling/a/jlai11:/bin/bash
+   272	jli109:x:338945:1445043:Li, 
+Jiangtao:/data/keeling/a/jli109:/bin/tcsh
+   273	jlin5:x:270572:1445029:Lin, Jintai:/data/keeling/a/jlin5:/bin/tcsh
+   274	jm5:x:699427:1954896:Murphy, 
+Johnathan:/data/keeling/a/jm5:/bin/tcsh
+   275	jmain2:x:222485:1954896:Main, Jennifer 
+E:/data/keeling/a/jmain2:/bin/tcsh
+   276	jmanton:x:206295:1445045:Manton, Jonathan 
+Andrew:/data/keeling/a/jmanton:/bin/tcsh
+   277	jmulhol2:x:963714:1472750:Mulholland, Jake 
+Patrick:/data/keeling/a/jmulhol2:/bin/bash
+   278	jones29:x:462313:1444980:Jones, Amanda 
+M:/data/keeling/a/jones29:/bin/tcsh
+   279	josephw3:x:403588:1954896:White, 
+Joey:/data/keeling/a/josephw3:/bin/bash
+   280	jporca2:x:770785:1549073:Porcaro, Joel 
+David:/data/keeling/a/jporca2:/bin/bash
+   281	jscheff2:x:300250:1444966:Scheff, Jacob 
+Steven:/data/keeling/a/jscheff2:/bin/tcsh
+   282	jthayer2:x:311755:1472749:Thayer, Jeffrey 
+D:/data/keeling/a/jthayer2:/bin/tcsh
+   283	jtian4:x:449605:1444980:Tian, 
+Jian:/data/keeling/a/jtian4:/bin/tcsh
+   284	jtraite2:x:425697:1445009:Traiteur, Justin 
+Joseph:/data/keeling/a/jtraite2:/bin/tcsh
+   285	jtrapp:x:680634:1472750:Trapp, 
+Robert:/data/keeling/a/jtrapp:/bin/tcsh
+   286	junum:x:237624:1444966:Um, Jun 
+Shik:/data/keeling/a/junum:/bin/tcsh
+   287	jwbowers:x:438844:1549048:Bowers, 
+Jake:/data/keeling/a/jwbowers:/bin/tcsh
+   288	jwu72:x:615966:1549044:Wu, 
+Jhih-Chian:/data/keeling/a/jwu72:/bin/tcsh
+   289	jx2:x:530912:1549073:Xu, Jiaxin:/data/keeling/a/jx2:/bin/bash
+   290	jzhan166:x:951259:1445029:Zhang, 
+Jun:/data/keeling/a/jzhan166:/bin/tcsh
+   291	kahmed:x:581199:1444936:Ahmed, Kazi 
+F:/data/keeling/a/kahmed:/bin/tcsh
+   292	kavthkr2:x:593104:1549073:Kavthekar, Anjali 
+Atul:/data/keeling/a/kavthkr2:/bin/bash
+   293	kbae3:x:425502:1444966:Bae, Kenny:/data/keeling/a/kbae3:/bin/tcsh
+   294	kcraine2:x:374287:1444925:Craine, Kevin 
+E:/data/keeling/a/kcraine2:/bin/tcsh
+   295	kdehoff2:x:374654:1444926:DeHoff, Kevin 
+M:/data/keeling/a/kdehoff2:/bin/tcsh
+   296	kechik2:x:986268:1549073:Kechik, Grant 
+Alexander:/data/keeling/a/kechik2:/bin/bash
+   297	keeler2:x:429581:1444987:Keeler, Jason 
+M:/data/keeling/a/keeler2:/bin/tcsh
+   298	kenneth:x:114480:1445048:Patten, 
+Kenneth:/data/keeling/a/kenneth:/bin/tcsh
+   299	kevintg2:x:813309:1444925:Gray, Kevin 
+Thomas:/data/keeling/a/kevintg2:/bin/tcsh
+   300	khoogewi:x:274669:1472750:Hoogewind, 
+Kimberly:/data/keeling/a/khoogewi:/bin/bash
+   301	kiida2:x:996043:1444987:Iida, 
+Kazuaki:/data/keeling/a/kiida2:/bin/tcsh
+   302	kinson2:x:979628:1549050:Kinson, Christopher 
+Leron:/data/keeling/a/kinson2:/bin/tcsh
+   303	kjain5:x:207580:1549073:Jain, 
+Khushboo:/data/keeling/a/kjain5:/bin/bash
+   304	kjhand2:x:492994:1549073:Hand, Kyle 
+Joseph:/data/keeling/a/kjhand2:/bin/bash
+   305	kjmuelle:x:124679:1444926:Mueller, Kevin 
+J:/data/keeling/a/kjmuelle:/bin/tcsh
+   306	kkaczka2:x:954789:1954896:Kaczka, 
+Katie:/data/keeling/a/kkaczka2:/bin/tcsh
+   307	kkim134:x:307931:1549044:Kim, 
+Kwanghyun:/data/keeling/a/kkim134:/bin/tcsh
+   308	kleemans:x:312211:1734883:Kleemans, 
+Marieke:/data/keeling/a/kleemans:/bin/tcsh
+   309	kokkat1:x:873717:1444987:Kokkat, Jobin 
+Kuruvilla:/data/keeling/a/kokkat1:/bin/tcsh
+   310	konrard2:x:374364:1444980:Konrardy, Blake 
+Steven:/data/keeling/a/konrard2:/bin/tcsh
+   311	kroth6:x:940552:1444980:Roth, Katherine 
+Dolores:/data/keeling/a/kroth6:/bin/tcsh
+   312	krzemin2:x:974613:1954896:Krzemien, 
+David:/data/keeling/a/krzemin2:/bin/tcsh
+   313	ksantaa2:x:376115:1549042:Santa Ana, 
+Kathleen:/data/keeling/a/ksantaa2:/bin/tcsh
+   314	kumler1:x:868989:1445029:Kumler, Andrew 
+Charles:/data/keeling/a/kumler1:/bin/tcsh
+   315	kwang47:x:843216:1688625:Wang, 
+Kexuan:/data/keeling/a/kwang47:/bin/bash
+   316	kyubong2:x:553308:1549044:Cho, Kyu 
+Bong:/data/keeling/a/kyubong2:/bin/tcsh
+   317	lakocy1:x:877980:1444980:Lakocy, Alexander 
+J:/data/keeling/a/lakocy1:/bin/tcsh
+   318	lanes:x:968541:1549046:Schwartz, Lane 
+Oscar:/data/keeling/a/lanes:/bin/tcsh
+   319	lcarter2:x:885353:1445034:Carter, Lauren 
+Christine:/data/keeling/a/lcarter2:/bin/tcsh
+   320	lch2:x:119963:1809355:Hernandez Rodriguez, Leila 
+Constanza:/data/keeling/a/lch2:/bin/bash
+   321	lcheng10:x:184602:1444980:Cheng, 
+Lin:/data/keeling/a/lcheng10:/bin/tcsh
+   322	lchoi7:x:715993:1445015:Choi, Stella 
+Lina:/data/keeling/a/lchoi7:/bin/tcsh
+   323	lee688:x:666118:1444926:Lee, 
+Byungsuk:/data/keeling/a/lee688:/bin/tcsh
+   324	letterl1:x:667857:667857:Letterly, Aaron 
+Douglas:/data/keeling/a/letterl1:/bin/tcsh
+   325	lfierce2:x:299070:1444980:Fierce, Laura 
+Michelle:/data/keeling/a/lfierce2:/bin/tcsh
+   326	li230:x:630664:1444980:Li, Yinrui:/data/keeling/a/li230:/bin/tcsh
+   327	libo:x:124860:1549053:Li, Bo:/data/keeling/a/libo:/bin/tcsh
+   328	linchen:x:861860:1445040:Chen, 
+Lin:/data/keeling/a/linchen:/bin/tcsh
+   329	ljliu:x:913151:1445040:Liu, Lijun:/data/keeling/a/ljliu:/bin/tcsh
+   330	lkern2:x:655706:1445034:Kern, Lisa 
+J:/data/keeling/a/lkern2:/bin/tcsh
+   331	lliang4:x:248883:1444926:Liang, 
+Lusheng:/data/keeling/a/lliang4:/bin/tcsh
+   332	lmmcgin2:x:119834:1549073:McGinnity Boswell, Lauren 
+Michelle:/data/keeling/a/lmmcgin2:/bin/bash
+   333	lshand2:x:697414:1549053:Shand, Lyndsay 
+Elizabeth:/data/keeling/a/lshand2:/bin/tcsh
+   334	lsong9:x:929881:1684596:Song, 
+Liwei:/data/keeling/a/lsong9:/bin/tcsh
+   335	lvrsgnz2:x:428149:1711607:Olivares Gonzalez, 
+Mauricio:/data/keeling/a/lvrsgnz2:/bin/tcsh
+   336	m-mak:x:115899:1444969:Mak, Mankin:/data/keeling/a/m-mak:/bin/tcsh
+   337	m-straka:x:116044:116044:Straka, Mark 
+A:/data/keeling/a/m-straka:/bin/tcsh
+   338	mabsher2:x:412140:412140:King, Megan 
+R:/data/keeling/a/mabsher2:/bin/tcsh
+   339	macombe2:x:873916:1444987:Macomber, Matthew 
+K:/data/keeling/a/macombe2:/bin/tcsh
+   340	majetic2:x:885469:1954896:Majetic, Marley 
+Elizabeth:/data/keeling/a/majetic2:/bin/bash
+   341	maliawc1:x:761091:1444966:Maliawco, Richard James 
+Jr:/data/keeling/a/maliawc1:/bin/tcsh
+   342	malice:x:104183:1549042:Wu, Maryalice 
+S:/data/keeling/a/malice:/bin/tcsh
+   343	manaste2:x:663449:1444926:Manaster, Andrew 
+I:/data/keeling/a/manaste2:/bin/tcsh
+   344	mascio2:x:882471:1444966:Mascio, Jeana 
+R:/data/keeling/a/mascio2:/bin/tcsh
+   345	matus2:x:281648:1809355:Matus, Sean 
+Alan:/data/keeling/a/matus2:/bin/bash
+   346	mavec2:x:947223:1444987:Mavec, Martin 
+A:/data/keeling/a/mavec2:/bin/tcsh
+   347	mbizja2:x:607800:1536655:Bizjack, Matthew 
+Thomas:/data/keeling/a/mbizja2:/bin/tcsh
+   348	mcbell:x:657766:1549047:Bell, Mark 
+Christopher:/data/keeling/a/mcbell:/bin/tcsh
+   349	mcfarq:x:182485:1693997:McFarquhar, 
+Greg:/data/keeling/a/mcfarq:/bin/tcsh
+   350	mcha:x:310385:1444980:Chan, Ming 
+Yan:/data/keeling/a/mcha:/bin/tcsh
+   351	mchigley:x:863459:1445029:Higley, Melinda 
+Catherine:/data/keeling/a/mchigley:/bin/tcsh
+   352	mcolon2:x:305571:1444992:Colon Robles, 
+Marile:/data/keeling/a/mcolon2:/bin/tcsh
+   353	meiyapp2:x:826230:1444936:Meiyappan, 
+Prasanth:/data/keeling/a/meiyapp2:/bin/tcsh
+   354	mfreer:x:266306:1444966:Freer, 
+Matthew:/data/keeling/a/mfreer:/bin/tcsh
+   355	mincshin:x:498423:1820011:Shin, Min 
+Chul:/data/keeling/a/mincshin:/bin/tcsh
+   356	mingsu2:x:983528:1444926:Su, 
+Ming:/data/keeling/a/mingsu2:/bin/tcsh
+   357	miyawak2:x:594524:1809355:Miyawaki, 
+Osamu:/data/keeling/a/miyawak2:/bin/bash
+   358	mjring:x:501759:1445010:Ring, 
+Michael:/data/keeling/a/mjring:/bin/tcsh
+   359	mjwilso2:x:175356:1444926:Wilson, Michael 
+Jason:/data/keeling/a/mjwilso2:/bin/tcsh
+   360	mmesseh:x:330127:1445044:Abdel Messeh, 
+Maged:/data/keeling/a/mmesseh:/bin/tcsh
+   361	mobeidin:x:687578:1549047:Obeidin, 
+Malik:/data/keeling/a/mobeidin:/bin/tcsh
+   362	mokos:x:131390:1445040:Mokos, Ryan:/data/keeling/a/mokos:/bin/tcsh
+   363	monical1:x:467344:1445040:Monical, 
+Tess:/data/keeling/a/monical1:/bin/tcsh
+   364	morales7:x:460035:1444980:Morales, 
+Annareli:/data/keeling/a/morales7:/bin/tcsh
+   365	mrodr40:x:402498:1954896:Rodriguez, Melissa 
+Jisselle:/data/keeling/a/mrodr40:/bin/bash
+   366	msharpe2:x:245489:1549073:Sharpe, Miranda 
+Marie:/data/keeling/a/msharpe2:/bin/bash
+   367	mtimlin:x:159544:1444940:Timlin, Michael 
+S:/data/keeling/a/mtimlin:/bin/tcsh
+   368	mum:x:309324:1445029:Um, Myoung-Jin:/data/keeling/a/mum:/bin/tcsh
+   369	naegele2:x:729108:1472751:Naegele, Steven 
+M:/data/keeling/a/naegele2:/bin/tcsh
+   370	ndowens2:x:908659:1444987:Owens, Nathan 
+David:/data/keeling/a/ndowens2:/bin/tcsh
+   371	neibarg2:x:320924:1954896:Neibarger, Kaitlin 
+Jo:/data/keeling/a/neibarg2:/bin/bash
+   372	nmd:x:436808:1549047:Dunfield, Nathan 
+M:/data/keeling/a/nmd:/bin/tcsh
+   373	nmycyk2:x:411900:1445015:Mycyk, Nicholas 
+J:/data/keeling/a/nmycyk2:/bin/tcsh
+   374	norris13:x:761082:1693997:Fay, Bethany 
+N:/data/keeling/a/norris13:/bin/tcsh
+   375	nriemer:x:450287:1444980:Riemer, 
+Nicole:/data/keeling/a/nriemer:/bin/tcsh
+   376	nrohrer2:x:625358:1444936:Rohrer, Nicholas 
+J:/data/keeling/a/nrohrer2:/bin/tcsh
+   377	nschiff2:x:427650:1445015:Gaynor, Nicole June 
+Schiffer:/data/keeling/a/nschiff2:/bin/tcsh
+   378	nute2:x:423791:1549052:Nute, Michael 
+Gordon:/data/keeling/a/nute2:/bin/tcsh
+   379	nuwal2:x:533432:1444980:Nuwal, 
+Nakul:/data/keeling/a/nuwal2:/bin/tcsh
+   380	nwendt2:x:894396:1444987:Wendt, Nathan 
+Allen:/data/keeling/a/nwendt2:/bin/tcsh
+   381	nzelask2:x:860247:1444925:Zelasko, Nicholas 
+John:/data/keeling/a/nzelask2:/bin/tcsh
+   382	oien2:x:834063:1721318:Oien, Rachel 
+P:/data/keeling/a/oien2:/bin/tcsh
+   383	ortiz14:x:612139:1445034:Ortiz, Ana 
+P:/data/keeling/a/ortiz14:/bin/tcsh
+   384	paloma:x:401304:1445015:Borque, 
+Paloma:/data/keeling/a/paloma:/bin/tcsh
+   385	panwang:x:857090:1445043:Wang, 
+Pan:/data/keeling/a/panwang:/bin/tcsh
+   386	patel108:x:608182:1444966:Patel, Pratik 
+Ramesh:/data/keeling/a/patel108:/bin/tcsh
+   387	pavlovc2:x:245822:1445029:Pavlovic, 
+Nathan:/data/keeling/a/pavlovc2:/bin/tcsh
+   388	pchoi8:x:718917:1549073:Choi, 
+Peter:/data/keeling/a/pchoi8:/bin/bash
+   389	pdcunni2:x:369533:1549042:Cunningham, Paige 
+Danielle:/data/keeling/a/pdcunni2:/bin/tcsh
+   390	perillo3:x:385637:1445029:Perillo, Amelia 
+C:/data/keeling/a/perillo3:/bin/tcsh
+   391	peters65:x:772541:1444987:Peterson, Melissa 
+Karen:/data/keeling/a/peters65:/bin/tcsh
+   392	pgarg7:x:259594:1445015:Garg, 
+Piyush:/data/keeling/a/pgarg7:/bin/tcsh
+   393	pgregg:x:444059:1445040:Gregg, 
+Patricia:/data/keeling/a/pgregg:/bin/tcsh
+   394	phoenix2:x:482559:1445029:Phoenix, Daniel 
+Benjamin:/data/keeling/a/phoenix2:/bin/tcsh
+   395	pksung2:x:839228:1549073:Sung, Paul 
+Kisoo:/data/keeling/a/pksung2:/bin/bash
+   396	prbrown:x:253824:1445015:Brown, Patrick 
+Rocco:/data/keeling/a/prbrown:/bin/tcsh
+   397	pshi2:x:966948:1549050:Shi, Peibei:/data/keeling/a/pshi2:/bin/tcsh
+   398	qiao2:x:430901:1445029:Qiao, 
+Fengxue:/data/keeling/a/qiao2:/bin/tcsh
+   399	qikaih2:x:351516:1549073:Huang, 
+Qikai:/data/keeling/a/qikaih2:/bin/bash
+   400	qzhou11:x:796679:1445040:Zhou, 
+Quan:/data/keeling/a/qzhou11:/bin/tcsh
+   401	r-rauber:x:118443:1693997:Rauber, Robert 
+M:/data/keeling/a/r-rauber:/bin/tcsh
+   402	r-weaver:x:118519:1445043:Weaver, Richard 
+L:/data/keeling/a/r-weaver:/bin/tcsh
+   403	rakers2:x:410235:1445015:Akers, Roger A 
+Jr:/data/keeling/a/rakers2:/bin/tcsh
+   404	randyjc2:x:590087:1445015:Chase, Randy 
+J:/data/keeling/a/randyjc2:/bin/bash
+   405	rbarman2:x:426389:1444936:Barman, 
+Rahul:/data/keeling/a/rbarman2:/bin/tcsh
+   406	ringsta2:x:815507:1445029:Ringstad, Robert 
+P:/data/keeling/a/ringsta2:/bin/tcsh
+   407	rjackso2:x:327867:1444966:Jackson, Robert 
+C:/data/keeling/a/rjackso2:/bin/tcsh
+   408	rkauss2:x:272658:1549073:Kauss, Ryan 
+Daniel:/data/keeling/a/rkauss2:/bin/bash
+   409	rkoenker:x:118961:1549045:Koenker, Roger 
+W:/data/keeling/a/rkoenker:/bin/tcsh
+   410	rnystro2:x:102137:1445034:Nystrom, Robert 
+Glenn:/data/keeling/a/rnystro2:/bin/tcsh
+   411	roache2:x:572217:1549042:Roache, David 
+James:/data/keeling/a/roache2:/bin/tcsh
+   412	rosemm2:x:957395:1444966:Miller, Rose 
+Marie:/data/keeling/a/rosemm2:/bin/bash
+   413	rosenow1:x:477080:1444987:Rosenow, 
+Andrew:/data/keeling/a/rosenow1:/bin/tcsh
+   414	rpd:x:101843:1445044:Dass, Rami P:/data/keeling/a/rpd:/bin/tcsh
+   415	rsriver:x:393913:1444994:Sriver, 
+Ryan:/data/keeling/a/rsriver:/bin/tcsh
+   416	ruizhao:x:176486:1701907:Zhao, 
+Rui:/data/keeling/a/ruizhao:/bin/tcsh
+   417	rvande5:x:230576:1549073:Van Der Karr, Riley 
+James:/data/keeling/a/rvande5:/bin/bash
+   418	sabine:x:240782:1444992:Goeke, Sabine Luise 
+Klara:/data/keeling/a/sabine:/bin/tcsh
+   419	saenz3:x:706234:1549044:Saenz Munoz, Luis 
+Felipe:/data/keeling/a/saenz3:/bin/tcsh
+   420	sagnik:x:440593:1444926:Dey, 
+Sagnik:/data/keeling/a/sagnik:/bin/tcsh
+   421	saisai:x:942665:1444966:Ding, 
+Saisai:/data/keeling/a/saisai:/bin/tcsh
+   422	sarahar2:x:437845:1809355:Ray, Sarah 
+Ashley:/data/keeling/a/sarahar2:/bin/bash
+   423	savin2:x:881376:1444925:Savin, Mark 
+Daniel:/data/keeling/a/savin2:/bin/tcsh
+   424	sbroy:x:391040:1445009:Baidya Roy, 
+Somnath:/data/keeling/a/sbroy:/bin/tcsh
+   425	sbrwnng2:x:122027:1444936:Browning, Shawna 
+Jori:/data/keeling/a/sbrwnng2:/bin/tcsh
+   426	schenck:x:439383:1962218:Schenck, Henry 
+Koewing:/data/keeling/a/schenck:/bin/bash
+   427	schlesin:x:119869:1445010:Schlesinger, Michael 
+E:/data/keeling/a/schlesin:/bin/tcsh
+   428	sdzhao:x:340915:1549054:Zhao, Sihai 
+Dave:/data/keeling/a/sdzhao:/bin/tcsh
+   429	serbetc2:x:908238:1549073:Serbetcioglu, Berk 
+C:/data/keeling/a/serbetc2:/bin/bash
+   430	sgupta92:x:835662:1444966:Gupta, 
+Siddhant:/data/keeling/a/sgupta92:/bin/tcsh
+   431	shafer1:x:773735:1549044:Shafer, Rachel 
+C:/data/keeling/a/shafer1:/bin/tcsh
+   432	shannon8:x:774118:1444980:Shannon, Tamika 
+Nicole:/data/keeling/a/shannon8:/bin/tcsh
+   433	shilpag:x:887421:1444936:Gahlot, 
+Shilpa:/data/keeling/a/shilpag:/bin/tcsh
+   434	shk:x:100077:1472751:Shailendra Kumar, 
+-:/data/keeling/a/shk:/bin/tcsh
+   435	shu11:x:769875:1549050:Shu, Xinxin:/data/keeling/a/shu11:/bin/tcsh
+   436	silver7:x:473037:1444966:Silver, Amanda 
+Joanne:/data/keeling/a/silver7:/bin/tcsh
+   437	sinsala2:x:409121:1444926:Insalaco, Savannah 
+J:/data/keeling/a/sinsala2:/bin/tcsh
+   438	skaer2:x:210650:1444987:Skaer, Tyrus 
+Daniel:/data/keeling/a/skaer2:/bin/tcsh
+   439	slasher:x:784191:1472751:Lasher-Trapp, 
+Sonia:/data/keeling/a/slasher:/bin/tcsh
+   440	slesak2:x:173810:1549073:Lesak, Samuel 
+Ashton:/data/keeling/a/slesak2:/bin/bash
+   441	smith66:x:457754:1445009:Smith, Maxwell 
+A:/data/keeling/a/smith66:/bin/tcsh
+   442	snesbitt:x:393079:1445015:Nesbitt, 
+Stephen:/data/keeling/a/snesbitt:/bin/bash
+   443	snodgrss:x:236062:1444916:Snodgrass, Eric 
+Richard:/data/keeling/a/snodgrss:/bin/tcsh
+   444	solsen:x:601139:1445029:Olsen, 
+Seth:/data/keeling/a/solsen:/bin/tcsh
+   445	song81:x:764829:1444936:Song, 
+Yang:/data/keeling/a/song81:/bin/tcsh
+   446	spark185:x:737705:1444905:Park, Sun 
+Young:/data/keeling/a/spark185:/bin/tcsh
+   447	sportnoy:x:120353:1721629:Portnoy, Stephen 
+L:/data/keeling/a/sportnoy:/bin/tcsh
+   448	srmntbr2:x:123981:1549045:Sarmiento Barbieri, Ignacio 
+Martin:/data/keeling/a/srmntbr2:/bin/tcsh
+   449	ssanyal3:x:764874:1445029:Sanyal, 
+Swarnali:/data/keeling/a/ssanyal3:/bin/tcsh
+   450	sschmtt2:x:227097:1536655:Schmitt, Susan 
+Jane:/data/keeling/a/sschmtt2:/bin/tcsh
+   451	ssengpt2:x:267669:1549059:Sengupta, 
+Srijan:/data/keeling/a/ssengpt2:/bin/tcsh
+   452	sshrest2:x:361770:1444936:Shrestha, 
+Suravi:/data/keeling/a/sshrest2:/bin/tcsh
+   453	sshu3:x:159459:1444936:Shu, Shijie:/data/keeling/a/sshu3:/bin/tcsh
+   454	sssu0920:x:536499:1445029:Su, 
+Shenshen:/data/keeling/a/sssu0920:/bin/tcsh
+   455	sstrey2:x:427559:1444940:Strey, Sara 
+T:/data/keeling/a/sstrey2:/bin/tcsh
+   456	stechma2:x:390197:1444966:Stechman, 
+Dan:/data/keeling/a/stechma2:/bin/bash
+   457	stephane:x:171929:1549055:Guerrier, 
+Stephane:/data/keeling/a/stephane:/bin/tcsh
+   458	stewar14:x:477076:1444940:Stewart, 
+Brooke:/data/keeling/a/stewar14:/bin/tcsh
+   459	such2:x:654954:2032973:Such, Lauryn 
+W:/data/keeling/a/such2:/bin/bash
+   460	survila2:x:329406:1444905:Survila, 
+Kornelijus:/data/keeling/a/survila2:/bin/tcsh
+   461	sutter3:x:474065:1444925:Sutter, Christian 
+A:/data/keeling/a/sutter3:/bin/tcsh
+   462	swang196:x:665862:1721629:Wang, 
+Shenghao:/data/keeling/a/swang196:/bin/tcsh
+   463	sxia6:x:438659:1549044:Xia, Shiyun:/data/keeling/a/sxia6:/bin/tcsh
+   464	sycai2:x:161842:1809355:Cai, Steven 
+Yongxin:/data/keeling/a/sycai2:/bin/bash
+   465	szhu28:x:710097:1444966:Zhu, 
+Stuart:/data/keeling/a/szhu28:/bin/tcsh
+   466	szuta:x:230457:1941508:Szuta, Patryk 
+L:/data/keeling/a/szuta:/bin/tcsh
+   467	szwczyk2:x:637286:1444916:Szewczyk, Joanna 
+Eva:/data/keeling/a/szwczyk2:/bin/tcsh
+   468	szymbor2:x:223441:2032973:Szymborski, Sarah 
+Marie:/data/keeling/a/szymbor2:/bin/bash
+   469	tackett2:x:429588:1444926:Tackett, Jason 
+Lucas:/data/keeling/a/tackett2:/bin/tcsh
+   470	taheripo:x:159662:1444936:Taheripour, 
+Farzad:/data/keeling/a/taheripo:/bin/tcsh
+   471	tarvis1:x:485166:1445009:Tarvis, Terence 
+G:/data/keeling/a/tarvis1:/bin/tcsh
+   472	tcox1:x:173514:1445040:Leonard, Tiffany 
+F:/data/keeling/a/tcox1:/bin/tcsh
+   473	teffland:x:732015:1444980:Effland, Thomas 
+David:/data/keeling/a/teffland:/bin/tcsh
+   474	thunber2:x:329734:1549073:Thunberg, Sarah 
+M:/data/keeling/a/thunber2:/bin/bash
+   475	tisch2:x:224122:1549073:Tisch, Paul 
+Louis:/data/keeling/a/tisch2:/bin/bash
+   476	tjbates2:x:657002:2032973:Bates, Thornton 
+Judson:/data/keeling/a/tjbates2:/bin/bash
+   477	tjyoung2:x:227527:1954896:Young, Tyler 
+J:/data/keeling/a/tjyoung2:/bin/bash
+   478	tlbrown3:x:553421:1444966:Brown, Tyra 
+Lyn:/data/keeling/a/tlbrown3:/bin/tcsh
+   479	tomasek3:x:408220:1445029:Tomasek, Bradley 
+James:/data/keeling/a/tomasek3:/bin/tcsh
+   480	totoni2:x:813713:1444936:Totoni, 
+Ehsan:/data/keeling/a/totoni2:/bin/tcsh
+   481	trichar5:x:429672:1444936:Richardson, Tosha 
+K:/data/keeling/a/trichar5:/bin/tcsh
+   482	tsatrom2:x:411264:1809355:Satrom, Thomas 
+Andrew:/data/keeling/a/tsatrom2:/bin/bash
+   483	tslin2:x:617907:1444936:Lin, 
+Tzu-Shun:/data/keeling/a/tslin2:/bin/tcsh
+   484	turasky2:x:719555:1444925:Turasky, Eli 
+Jacob:/data/keeling/a/turasky2:/bin/bash
+   485	turner23:x:665163:1444987:Turner, William 
+Scott:/data/keeling/a/turner23:/bin/tcsh
+   486	twist2:x:993257:1549073:Twist, Michelle 
+L:/data/keeling/a/twist2:/bin/bash
+   487	tzaremb2:x:742573:2032973:Zaremba, Troy 
+J:/data/keeling/a/tzaremb2:/bin/bash
+   488	ulm2:x:463502:1549059:Ulm, Matthew 
+C:/data/keeling/a/ulm2:/bin/tcsh
+   489	vanhoy2:x:736680:1444980:Van Hoy, Scott 
+E:/data/keeling/a/vanhoy2:/bin/tcsh
+   490	ventimi1:x:673269:1445015:Ventimiglia, Thomas 
+A:/data/keeling/a/ventimi1:/bin/tcsh
+   491	vikasha:x:544145:544145:Agarwal, 
+Vikash:/data/keeling/a/vikasha:/bin/tcsh
+   492	vllgsbr2:x:806135:2032973:Villegas Bravo, Javier 
+Alfredo:/data/keeling/a/vllgsbr2:/bin/bash
+   493	vperez29:x:757055:1549073:Perez, 
+Victor:/data/keeling/a/vperez29:/bin/bash
+   494	weech1:x:673283:1444987:Weech, Danielle 
+Mae:/data/keeling/a/weech1:/bin/tcsh
+   495	wegman1:x:763975:1444987:Wegman, Joseph 
+Peter:/data/keeling/a/wegman1:/bin/tcsh
+   496	weiwu3:x:542125:1444966:Wu, Wei:/data/keeling/a/weiwu3:/bin/tcsh
+   497	weyant:x:261634:1444966:Weyant, Cheryl 
+Lynn:/data/keeling/a/weyant:/bin/tcsh
+   498	wienhof1:x:614553:1444925:Wienhoff, Zachary 
+B:/data/keeling/a/wienhof1:/bin/tcsh
+   499	wittig:x:141341:1444936:Wittig, Victoria 
+E:/data/keeling/a/wittig:/bin/tcsh
+   500	wjia4:x:427234:1445029:Jia, 
+Wenjing:/data/keeling/a/wjia4:/bin/tcsh
+   501	wlchang:x:676011:1444980:Chang, 
+Wayne:/data/keeling/a/wlchang:/bin/tcsh
+   502	wlchapma:x:121879:1444940:Chapman, William 
+L:/data/keeling/a/wlchapma:/bin/tcsh
+   503	wli16:x:308936:1445034:Li, Weiwei:/data/keeling/a/wli16:/bin/tcsh
+   504	wrg:x:159659:1959354:Guenthner, 
+William:/data/keeling/a/wrg:/bin/tcsh
+   505	wuebbles:x:103308:1445029:Wuebbles, Donald 
+J:/data/keeling/a/wuebbles:/bin/tcsh
+   506	wypark:x:865857:1740665:Park, Woong 
+Yong:/data/keeling/a/wypark:/bin/tcsh
+   507	xhchen:x:785280:1549057:Chen, 
+Xiaohui:/data/keeling/a/xhchen:/bin/tcsh
+   508	xinyix3:x:451685:1549073:Xu, 
+Xinyi:/data/keeling/a/xinyix3:/bin/bash
+   509	xsong:x:161132:1445043:Song, 
+Xiaodong:/data/keeling/a/xsong:/bin/tcsh
+   510	xtang14:x:697265:1549050:Tang, 
+Xiwei:/data/keeling/a/xtang14:/bin/tcsh
+   511	xuanbi2:x:195647:1549050:Bi, 
+Xuan:/data/keeling/a/xuanbi2:/bin/tcsh
+   512	xuxm:x:573487:1444936:Xu, Xiaoming:/data/keeling/a/xuxm:/bin/bash
+   513	yangfan:x:163047:1445043:Deng, 
+Yangfan:/data/keeling/a/yangfan:/bin/tcsh
+   514	yanzhan3:x:133601:1445040:Zhan, 
+Yan:/data/keeling/a/yanzhan3:/bin/tcsh
+   515	yeshus12:x:129794:1444936:Sharma, 
+Yeshu:/data/keeling/a/yeshus12:/bin/tcsh
+   516	yicao2:x:514961:1549053:Cao, Yi:/data/keeling/a/yicao2:/bin/tcsh
+   517	yideng:x:180390:1444969:Deng, Yi:/data/keeling/a/yideng:/bin/tcsh
+   518	yingjin2:x:656032:1444936:Jin, 
+Ying:/data/keeling/a/yingjin2:/bin/tcsh
+   519	yinxiao:x:667978:1549058:Huang, 
+Yinxiao:/data/keeling/a/yinxiao:/bin/tcsh
+   520	yirongw3:x:908051:1549073:Wu, 
+Yirong:/data/keeling/a/yirongw3:/bin/bash
+   521	yiyang9:x:778879:1445043:Yang, 
+Yi:/data/keeling/a/yiyang9:/bin/tcsh
+   522	yoritom2:x:883818:1445043:Yoritomo, John 
+Yukio:/data/keeling/a/yoritom2:/bin/tcsh
+   523	ypark61:x:938402:1549052:Park, Yeon 
+Joo:/data/keeling/a/ypark61:/bin/tcsh
+   524	yuguo:x:344865:1549059:Chen, Yuguo:/data/keeling/a/yuguo:/bin/tcsh
+   525	yuqiao:x:108260:1688625:Qiao, Yu:/data/keeling/a/yuqiao:/bin/bash
+   526	yuyao3:x:241573:1444980:Yao, Yu:/data/keeling/a/yuyao3:/bin/bash
+   527	yxliao:x:318806:1445029:Liao, 
+Yixiang:/data/keeling/a/yxliao:/bin/tcsh
+   528	yyang11:x:196659:1444926:Yang, 
+Yuekui:/data/keeling/a/yyang11:/bin/tcsh
+   529	zgfeng:x:890486:1684596:Feng, 
+Zhigang:/data/keeling/a/zgfeng:/bin/tcsh
+   530	zhangcc:x:869068:1444980:Zhang, 
+Chenchong:/data/keeling/a/zhangcc:/bin/tcsh
+   531	zhuowang:x:811296:1445034:Wang, 
+Zhuo:/data/keeling/a/zhuowang:/bin/tcsh
+   532	zibais2:x:498351:1549073:Song, 
+Zibai:/data/keeling/a/zibais2:/bin/bash
+   533	zobel2:x:346017:1445029:Zobel, Zachary 
+T:/data/keeling/a/zobel2:/bin/tcsh
+   534	zyang87:x:241401:1688625:Yang, 
+Zhao:/data/keeling/a/zyang87:/bin/bash
+kjhand2@keeling etc: $ cd /data/atms305/a/kjhand2/ATMS-305
+kjhand2@keeling ATMS-305: $ ls
+LICENSE  README.md  SYLLABUS.md  Week2-Thursday  Week2-Tuesday  
+Week2Answers
+kjhand2@keeling ATMS-305: $ cd ..
+kjhand2@keeling kjhand2: $ ls
+ATMS-305  HW1_kjhand2.pdf
+kjhand2@keeling kjhand2: $ gedit HW1_kjhand2.pdf
+
+(gedit:11324): Gtk-WARNING **: cannot open display:
+kjhand2@keeling kjhand2: $ pico HW1_kjhand2.pdf
+kjhand2@keeling kjhand2: $ pico HW1_kjhand2.pdf
+kjhand2@keeling kjhand2: $ pico HW1_kjhand2.pdf
+kjhand2@keeling kjhand2: $
+kjhand2@keeling kjhand2: $ mv HW1_kjhand2.pdf ATMS-305/Week2Answers/
+kjhand2@keeling kjhand2: $ cd ATMS-305/Week2Answers/
+kjhand2@keeling Week2Answers: $ ls
+HW1_kjhand2.pdf  Week2Answers.txt  signature.txt
+kjhand2@keeling Week2Answers: $
