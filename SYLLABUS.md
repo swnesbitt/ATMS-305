@@ -70,7 +70,7 @@ This course will be taught in a *flipped classroom* style of learning.  Lectures
 
 The course will be graded as a weighted average: 60% will be the average of assignments, 30% for quizzes, and 10% for the final exam.  The lowest quiz score will be dropped.
 
-Quizzes will be 10-question multiple choice, closed book, and administered online.  If you miss a quiz due to an unexcused absence, you will earn a 0.  However, makeup quizzes need to be scheduled with the Instructor.
+Quizzes will be 10-question multiple choice, open book, administered online.  If you miss a quiz due to an unexcused absence, you will earn a 0.  However, makeup quizzes need to be scheduled with the Instructor.
 
 The final exam will be 7:00-10:00 p.m., Friday, May 5.  A makeup exam time may be scheduled if there is a conflict with another exam.
 
