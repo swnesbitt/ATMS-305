@@ -34,13 +34,13 @@ This course focuses on the analysis of geophysical data sets using modern comput
 
 ## Textbooks
 
-###Required Text
+### Required Text
 
 *Python Programming and Visualization for Scientists* by A. DeCaria. Available in the bookstore or for purchase online (link to [publisher](http://www.sundogpublishing.com/shop/python-programming-and-visualization-for-scientists-alex-decaria/)).
 
 Our book has some corrections, which are available for download [here](http://www.sundogpublishing.com/PythonErrata.pdf).
 
-###Reference Texts (all are available as free E-Books through the University Library)
+### Reference Texts (all are available as free E-Books through the University Library)
 
 **Note: to access these books, you will need to be on campus or be connected to the Campus VPN under "Tunnel All"**
 
